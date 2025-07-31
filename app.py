@@ -13,7 +13,7 @@ model = load_learner('classify-mohirdev.pkl')
 
 file = st.file_uploader('Rasm yuklash', type=['png', 'gif', 'jpg', 'jpeg'])
 if file:
-    st.image(io.BytesIO(img_bytes, caption='Yuklangan rasm', use_container_width=True)
+    st.image(io.BytesIO(img_bytes), caption='Yuklangan rasm', use_container_width=True)
     
     img_bytes = file.read()
     img = PILImage.create(io.BytesIO(img_bytes))
