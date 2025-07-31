@@ -2,7 +2,7 @@ import streamlit as st
 from fastai.vision.all import *
 import pathlib
 plt = platform.system()
-if plt == 'Linux': pathlib.WindowsPath = pathlib.Posix.Path
+if plt == 'Linux': pathlib.WindowsPath = pathlib.PosixPath
 
 st.title('Bu klassifikatsiya model')
 
