@@ -13,9 +13,9 @@ model = load_learner('classify-mohirdev.pkl')
 
 file = st.file_uploader('Rasm yuklash', type=['png', 'gif', 'jpg', 'jpeg'])
 if file:
+    img_bytes = file.read()
     st.image(io.BytesIO(img_bytes), caption='Yuklangan rasm', use_container_width=True)
     
-    img_bytes = file.read()
     img = PILImage.create(io.BytesIO(img_bytes))
 
     pred, pred_id, probs = model.predict(img)
