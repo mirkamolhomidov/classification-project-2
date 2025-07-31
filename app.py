@@ -13,7 +13,7 @@ if uploaded_file is not None:
     
     st.image(img, caption="Yuklangan rasm", use_container_width=True)
 
-    model = load_learner("model.pkl")
+    model = load_learner("classify-mohirdev.pkl")
 
     pred, pred_id, probs = model.predict(img)
 
